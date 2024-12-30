@@ -1,0 +1,143 @@
+@import "./variables.scss";
+@media (max-width:1210px){
+    .order{
+        &-l{
+            width: 100dvw;
+            background-image: url(../imgs/order@2.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        &-img{
+            display: none;
+        }
+    }
+}
+@media (max-width:1024px){
+.header{
+    .nav-link{
+        font-size: 18px;
+    }
+}
+.hero{
+    &-title{
+        font-size: 56px;
+    }
+    &-img{
+        width: 80dvw;
+    }
+}
+}
+@media (max-width:990px){
+    .order{
+        &-l{
+            padding-bottom: 5%;
+            padding-top: 10%;
+            padding-inline: 10%;
+        }
+        &-title{
+            font-size: 28px;
+        }
+    }
+}
+@media (max-width:890px){
+    .color{
+        &-list{
+            justify-content: center;
+        }
+    }
+}
+@media (max-width:768px){
+    .header{
+        .nav,.r-nav{
+            display: none;
+        }
+    }
+    .header{
+        .mobile-menu{
+            display: block;
+    }
+}
+.hero{
+    &-title{
+        font-size: 48px;
+    }
+}
+.new{
+    &-title{
+        font-size:28px;
+    }
+    &-box{
+        flex-direction: column;
+        gap: 30px;
+    }
+    &-item{
+        font-size: 14px;
+        &:last-child{
+        font-size: 18px;
+        }
+    }
+    &-img{
+        width: 80dvw;
+    }
+}
+.footer{
+    .container{
+        gap: 40px;
+        flex-direction: column;
+    }
+}
+}
+@media (max-width:565px){
+    .hero{
+        &-title{
+            font-size: 36px;
+        }
+        &-button{
+            padding:16px 80px 13px;
+        }
+    }
+    .color{
+        &-title{
+            font-size: 26px;
+        }
+    }
+}
+@media (max-width:442px){
+    .header{
+        .mobile-menu{
+            .mobile-list{
+                .mobile-link-nav{
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .new{
+        &-title{
+            font-size:24px;
+        }
+        &-box{
+            flex-direction: column;
+            gap: 30px;
+        }
+        &-item{
+            font-size: 14px;
+        }
+    }
+    .order{
+        &-title{
+            font-size:24px;
+        }
+        &-button{
+            padding:12px 52px;
+        }
+    }
+}
+@media (max-width:375px){
+    .hero{
+        &-button{
+            padding:14px 60px 11px;
+        }
+    }
+}
