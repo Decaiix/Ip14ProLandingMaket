@@ -63,6 +63,21 @@
     }
 }
 }
+@media (max-width:652px){
+    .model{
+
+        .form-top{
+            flex-direction: column;
+            align-items: center;
+        }
+        .form-left{
+            width: 100%;
+        }
+        .form-right{
+            width: 100%;
+        }
+    }
+}
 @media (max-width:442px){
     .header{
         .mobile-menu{
