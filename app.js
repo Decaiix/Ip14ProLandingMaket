@@ -1,4 +1,5 @@
 const COLOR_BTNS = document.querySelectorAll('.color')
+const interCol = document.querySelector('.inter-col')
 COLOR_BTNS.forEach(color => {
     color.addEventListener('click', () => {
         let colorNameClass = color.className
@@ -19,4 +20,5 @@ function resetActiveBtns(){
 function setNewColor(color){
     console.log(color)
     document.querySelector('.hero-img').src = `./imgs/${color}@3.jpg`
+    interCol.innerHTML = `Цвет: ${color}`
 }
