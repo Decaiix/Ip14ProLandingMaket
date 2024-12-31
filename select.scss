@@ -37,6 +37,11 @@ button{
 body{
     font-family: "Inter", serif;
     word-wrap: break-word;
+    [type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;}
 }
 
 .header{
@@ -171,7 +176,7 @@ body{
         }
         .inter-col{
             color: $black;
-                font-size: 18px;
+                font-size: 15px;
                 font-weight: 400;
                 line-height: 1.2;
                 letter-spacing: 1.5px;
@@ -317,6 +322,15 @@ body{
     border-radius: 4px;
     box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.20);
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .form-top{
+        display: flex;
+    }
+    .form-left{
+        width: 50%;
+    }
+    .form-right{
+        width: 30%;
+    }
     .payment{
         color: $white;
         font-size: 20px;
@@ -345,16 +359,19 @@ body{
         letter-spacing: 0.12px;
         max-width: 448px;
         height: 50px;
-        padding: 11px 11px 11px 35px;
+        padding: 11px 11px 11px 40px;
         border-radius: 4px;
         outline: 2px solid $logo-col;
         margin-top: 4px;
         margin-bottom: 10px;
         transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
         background-color: transparent;
+        &::placeholder{
+            color: #ffffff94;
+        }
     }
     &-input:hover,&-input:focus{
-        outline: 1px solid $white;
+        outline: 2px solid $white;
     }
     &-input:hover + .user-model-svg{
         fill: $white;
@@ -387,6 +404,7 @@ textarea{
     margin-top: 4px;
     margin-bottom: 20px;
     width: 100%;
+    max-width: 448px;
     height: 120px;
     resize: none;
     padding: 12px 16px;
@@ -406,6 +424,10 @@ textarea{
         letter-spacing: 0.12px;
     }
 }
+.textarea-comm{
+    display: flex;
+    flex-direction: column;
+}
 .label-check{
     cursor: pointer;
     display: flex;
@@ -415,7 +437,7 @@ textarea{
         cursor: pointer;
     }
     & span{
-        color: $logo-col;
+        color: #ffffff94;
         font-size: 12px;
         font-weight: 400;
         line-height:1.71;
@@ -474,7 +496,7 @@ textarea{
     fill: $white;
     cursor: pointer;
     position: absolute;
-    top: 0;
+    top: -2px;
     left: 11px;
 }
 

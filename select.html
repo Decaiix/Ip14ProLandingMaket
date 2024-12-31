@@ -129,7 +129,9 @@
         </a>
             <h2 class="model-title">ОФОРМЛЕНИЕ ЗАКАЗА</h2>
             <form>
-            <label class="label-text" for="name">Имя</label>
+                <div class="form-top">
+               <div class="form-left">
+            <label class="label-text" for="name">Полное Имя</label>
             <div class="user-model">
                 <label class="user-label">
                     <input class="model-input" id="name" type="text" autocomplete="off" required>
@@ -159,7 +161,7 @@
     <label class="label-text" for="address">Адресс</label>
             <div class="user-model">
                 <label class="user-label">
-                    <input class="model-input" id="address" type="address" autocomplete="off" placeholder="Город,Ул.,Номер дома,Кв" required>
+                    <input class="model-input" id="address" type="address" autocomplete="off" placeholder="Город,Улица,Номер Дома,Квартира" required>
                     <svg class="user-model-svg">
                         <use href="./imgs/symbol-defs.svg#icon-home"></use>
                     </svg>
@@ -168,13 +170,49 @@
     <div class="payment">
         <p>К оплате: $599</p>
     </div>
-            <label class="label-text" for="comment">Комментарий</label>
-            <textarea id="comment" placeholder="Введите текст"></textarea>
-            <label class="label-check">
-                <input type="checkbox" required>
-                <span>Подтверждаю и принимаю     <a class="check-link" href="#">Условия договора</a></span>
-            </label>
-            <button class="form-button" type="submit">ОФОРМИТЬ</button>
+        </div> 
+        <div class="form-right">
+            <label class="label-text" for="cardNum">Номер карты</label>
+            <div class="user-model">
+                <label class="user-label">
+                    <input class="model-input" id="cardNum" type="number" autocomplete="off" placeholder="1234 1234 1234 1234 12" maxlength="16" required>
+                    <svg class="user-model-svg">
+                        <use href="./imgs/symbol-defs.svg#icon-creditcard"></use>
+                    </svg>
+        </label>
+    </div>
+        <label class="label-text" for="cardExp">Срок истичения</label>
+            <div class="user-model">
+                <label class="user-label">
+                    <input class="model-input" id="cardExp" type="number" autocomplete="off" placeholder="01/26" maxlength="5" required>
+                    <svg class="user-model-svg">
+                        <use href="./imgs/symbol-defs.svg#icon-credit-card"></use>
+                    </svg>
+        </label>
+    </div>
+        <label class="label-text" for="cardCvv">Код CVV</label>
+        <div class="user-model">
+            <label class="user-label">
+                <input class="model-input" id="cardCvv" type="number" autocomplete="off" placeholder="123" maxlength="3" required>
+                <svg class="user-model-svg">
+                    <use href="./imgs/symbol-defs.svg#icon-credit-card"></use>
+                </svg>
+    </label>
+            </div>
+        </div>
+    
+    </div>
+        <div class="form-bottom">
+            <div class="textarea-comm">
+                <label class="label-text" for="comment">Комментарий</label>
+                <textarea id="comment" placeholder="(Не обязательно)"></textarea>
+            </div>
+                <label class="label-check">
+                    <input type="checkbox" required>
+                    <span>Подтверждаю и принимаю     <a class="check-link" href="#">Условия договора</a></span>
+                </label>
+                <button class="form-button" type="submit">ОФОРМИТЬ</button> 
+        </div>
     </form>
         </div>
     </div>
