@@ -5,6 +5,9 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 h1 ,h2 ,h3 ,h4 ,h5 ,h6 ,p{
     margin: 0;
 }
@@ -71,20 +74,14 @@ body{
 
     
     .mobile-menu{
-        z-index: 2;
+        z-index: 5;
         display: none;
         position: relative;
         width: 40px;
         height: 40px;
-        &:hover{
-            .mobile-list{
-                pointer-events: all;
-                transform: translateX(0);
-            }
-        }
         &-svg{
-            width: 100%;
-            height: 100%;
+            width: 40px;
+            height: 40px;
             fill: $white;
             cursor: pointer;
         }
@@ -96,21 +93,25 @@ body{
             height: 25px;
         }
         .mobile-list{
+            transform:translate(100%);
+            position: fixed;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            pointer-events: none;
-            transform: translateX(100%);
-            position: fixed;
             top:0;
             right: 0;
             background-color: $white;
             border-radius: 8px 0 8px 8px;
-            width:70dvw;
+            width: 70dvw;
             height: 100dvh;
             padding: 90px 30px;
-            transition:transform 250ms ease-in-out;
+            transition:250ms ease-in-out;
         }
+        .mobile-list.open{
+            transition:250ms ease-in-out;
+            transform:translate(0);
+        }
+
             .mobile-list-nav{
                 display: flex;
                 flex-direction: column;
